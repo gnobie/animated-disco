@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="copyright" content="Copyright VentraIP Australia Pty Ltd 2016" />
+	<title>Emails &raquo; VentraIP VIPControl Management</title>
+	<link type="image/x-icon" rel="shortcut icon" href="/v2/static/favicon.ico">
+	<link rel="stylesheet" href="/v2/static/css/style.v2.css?v=26" type="text/css" />
+	<link rel="stylesheet" href="/v2/static/css/font-awesome.min.css" type="text/css" />
+	<link rel="stylesheet" href="//static.ventraip.com.au/js/colorbox/colorbox.css" type="text/css" />
+	<script type="text/javascript" src="/v2/static/js/jquery.js"></script>
+	<script type="text/javascript" src="/v2/static/js/min.js?v=53"></script>
+	<script type="text/javascript" src="/v2/static/js/jquery.chosen.min.js"></script>
+	<script type="text/javascript" src="//static.ventraip.com.au/js/colorbox/jquery.colorbox-min.js"></script>
+	<style>
+		#feedbackButton {
+			position: absolute;
+			top: 0;
+			right: 0;
+			z-index: 1500;
+			color: white;
+			padding: 10px 20px;
+			border-radius: 0 0 10px 10px;
+			font-weight: bold;
+			text-decoration: none;
+			cursor: pointer;
+			display: none;
+			text-align: center;
+			border: solid 1px #e94b37;
+			border-top: none;
+			-webkit-transition: background 150ms, color 150ms;
+			-moz-transition: background 150ms, color 150ms;
+			-o-transition: background 150ms, color 150ms;
+			transition: background 150ms, color 150ms;
+			background-color: #e94b37;
+		}
+		#feedbackButton:hover {
+			border-color: #e94b37;
+			background: #fff;
+			color: #e94b37;
+		}
+	</style>
+	<style type="text/css">
+        #social {
+            width: 135px;
+            margin-top: 103px;
+            margin-right:5px;
+        }
+        #social a {
+            width: 36px;
+            height: 36px;
+            float: left;
+            margin-left: 8px;
+            display: block;
+            opacity: 0.4;
+            position: relative;
+        }
+        .fb{
+        	background:url('https://static.ventraip.com.au/vipcontrol/img/social/fb.png') no-repeat;
+        }
+        .twit{
+        	background:url('https://static.ventraip.com.au/vipcontrol/img/social/twitter.png') no-repeat;
+        }
+        .gplus{
+        	background:url('https://static.ventraip.com.au/vipcontrol/img/social/gplus.png') no-repeat;
+        }
+        .banner {
+          width:100%;
+          display:block;
+          height: 75px;
+          background-repeat:no-repeat;
+        }
+
+        .banner-mid-left {
+          display:inline-block;
+          margin-left:50px;
+          float:left;
+          background-repeat: no-repeat;
+          background-position: left center;
+        }
+
+        .banner-middle {
+          display:inline-block;
+          margin-left:15px;
+          float:left;
+          background-repeat: no-repeat;
+          background-position: center center;
+        }
+
+        .banner-left {
+          display: inline-block;
+          float:left;
+          background-repeat: no-repeat;
+          background-position: left bottom;
+        }
+
+        .banner-right {
+          width: 141px;
+          height: 75px;
+          display: inline-block;
+          float:right;
+          background-repeat: no-repeat;
+          background-position: right bottom;
+        }
+        .vipsales-banner {
+          background-image: url(https://ventraip.com.au/static/images/banners/vipsales/vipsales_banner.png);
+          background-repeat:no-repeat;
+          background-position:center center;
+        }
+        .vipsales-background {
+            background-color:#32393f;
+        }
+        .inner-padding-topdeal {
+            width: 1080px;
+            margin: 0 auto;
+            height: 74px;
+        }
+        .c {
+            clear:both;
+        }
+    </style>
+    <script type="text/javascript">
+    $(document).ready(function(){
+    	$('#social a').hover(function(){
+    		$(this).stop();
+    		var px = $(this).css('bottom');
+    		$(this).animate({
+    			opacity: 1,
+    			bottom: '+=10'
+    		}, 200, function() {
+    		});
+    	},
+    	function(){
+    		$(this).stop();
+    		var px = $(this).css('bottom');
+    		px = px.toString();
+    		$(this).animate({
+    			opacity: 0.4,
+    			bottom: '-='+px
+    			}, 200, function() {
+    		});
+    	});
+    	$(".bx").colorbox({innerWidth: 600});
+    	$(".bxin").colorbox({inline: true, innerWidth: 600});
+
+        //ADD RECORD LABEL CHANGE.
+        $("select[name='record-type']").on('change', function() {
+            if($(".featherlight-content select[name='record-type'] option:selected").text() == 'AAAA') {
+                $(".featherlight-content #record-label-text").text('lel');
+            }
+        });
+    });
+    </script>
+</head>
+<body>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-59618512-2', 'auto');
+      ga('send', 'pageview');
+    </script>
+    
+	<div class="top-notifications"><div></div></div>
+	<div class="header">
+    	<div class="loading" style="display:none;"><div></div></div>
+    	    	<div class="ctrLogo"><a title="VIPControl" href="/home/"><img height="74" width="420" src="https://static.ventraip.com.au/logoBig.png" alt="VentraIP VIPControl" /></a></div>
+    	<div class="ctrTopText">
+    		<p class="TopText">
+    			Welcome Belinda  Irvine -     			<a href="/logout">Logout</a>
+			</p>
+		</div>
+    	<div id="social" style="float:right;">
+    		<a class="twit" title="Follow VentraIP on Twitter" target="_blank" href="http://twitter.com/VentraIP"></a>
+    		<a class="fb" title="Like VentraIP on Facebook" target="_blank" href="http://facebook.com/VentraIP"></a>
+    		<a class="gplus" title="Circle VentraIP on Google+" target="_blank" href="https://plus.google.com/+VentraIPAU/posts"></a>
+    	</div>
+	</div>
+<div class="content">
+	<div class="cntMenu">			<p class="menuHeading">Navigate</p>
+			<ul class="menu">						<li class="clicked current_item account">
+							Account<ul style="display:block;">								<li>
+									<a  href='/home'>
+										Welcome									</a>
+								</li>								<li>
+									<a  href='/home/account/login-history'>
+										Login History									</a>
+								</li>								<li>
+									<a  href='/home/account/information'>
+										My Details									</a>
+								</li>								<li>
+									<a  href='/home/account/payment'>
+										My Payment Method									</a>
+								</li>								<li>
+									<a class="selected"  href='/home/account/emails'>
+										Emails									</a>
+								</li>								<li>
+									<a  href='/home/account/invoice'>
+										Invoices									</a>
+								</li>			</ul>
+		</li>						<li class=" sharedhosting">
+							Shared Hosting<ul>								<li>
+									<a  href='/home/hosting'>
+										Manage									</a>
+								</li>								<li>
+									<a  href='/home/hosting/quick-login'>
+										Quick Login									</a>
+								</li>								<li>
+									<a  href='/home/hosting/service-status'>
+										Service Status									</a>
+								</li>								<li>
+									<a  ajax="false" target="_blank"href='https://secure.ventraip.com.au/cart.php'>
+										<img src="https://static.ventraip.com.au/ventraip.png" style="float:left;" width="20" height="20" /><b style="color:#D02288 !important;">Purchase</b>									</a>
+								</li>			</ul>
+		</li>						<li class=" servers">
+							Servers<ul>								<li>
+									<a  href='/home/server'>
+										Manage									</a>
+								</li>								<li>
+									<a  ajax="false" target="_blank"href='https://ventraip.com.au/servers'>
+										<img src="https://static.ventraip.com.au/ventraip.png" width="20" style="float:left;"  height="20" /><b style="color:#D02288 !important;">Purchase</b>									</a>
+								</li>			</ul>
+		</li>						<li class=" emailhosting">
+							Email Hosting<ul>								<li>
+									<a  href='/home/email'>
+										Manage									</a>
+								</li>								<li>
+									<a  href='/home/email/create'>
+										<img src="https://static.ventraip.com.au/ventraip.png" width="20" height="20" style="float:left;" /><b style="color:#D02288 !important;">Create Account</b>									</a>
+								</li>			</ul>
+		</li>						<li class=" domains">
+							Domains<ul>								<li>
+									<a  href='/home/domain'>
+										Manage									</a>
+								</li>								<li>
+									<a  ajax="false" target="_blank"href='https://secure.ventraip.com.au/cart.php?a=add&domain=transfer'>
+										Transfer									</a>
+								</li>								<li>
+									<a  ajax="false" target="_blank"href='https://secure.ventraip.com.au/cart.php?a=add&domain=register'>
+										<img src="https://static.ventraip.com.au/ventraip.png" width="20" style="float:left;"  height="20" /><b style="color:#D02288 !important;">Purchase</b>									</a>
+								</li>			</ul>
+		</li>						<li class=" sslcertificates">
+							SSL Certificates<ul>								<li>
+									<a  href='/home/ssl'>
+										Manage									</a>
+								</li>								<li>
+									<a  href='/home/ssl/purchase'>
+										<img src="https://static.ventraip.com.au/ventraip.png" width="20" height="20" style="float:left;" /><b style="color:#D02288 !important;">Purchase</b>									</a>
+								</li>			</ul>
+		</li>						<li class=" sms">
+							SMS<ul>								<li>
+									<a  href='/home/sms/send/single'>
+										Send Single SMS									</a>
+								</li>								<li>
+									<a  href='/home/sms/send/group'>
+										Send Group SMS									</a>
+								</li>								<li>
+									<a  href='/home/sms/address-book'>
+										Address Book									</a>
+								</li>								<li>
+									<a  href='/home/sms/templates'>
+										SMS Templates									</a>
+								</li>								<li>
+									<a  href='/home/sms/log'>
+										Message Log									</a>
+								</li>								<li>
+									<a  href='/home/sms/sender-id'>
+										Sender IDs									</a>
+								</li>								<li>
+									<a  href='/home/sms/import'>
+										CSV Import									</a>
+								</li>								<li>
+									<a  ajax="false" target="_blank"href='https://secure.ventraip.com.au/cart.php?gid=50'>
+										<img src="https://static.ventraip.com.au/ventraip.png" style="float:left;" width="20" height="20" /><b style="color:#D02288 !important;">Purchase</b>									</a>
+								</li>			</ul>
+		</li>						<li class=" supportcentre">
+							Support Centre<ul>								<li>
+									<a  ajax="false" target="_blank"href='http://faq.ventraip.com.au/'>
+										FAQ									</a>
+								</li>								<li>
+									<a  href='/home/eticket'>
+										View eTickets									</a>
+								</li>								<li>
+									<a  href='/home/eticket/new'>
+										Submit New eTicket									</a>
+								</li>								<li>
+									<a  href='/home/eticket/cpanel-migration'>
+										cPanel Migration Request									</a>
+								</li>			</ul>
+		</li>		</ul></div><div class='cntBody'>
+		<div class='cntCrumb'>
+			<img style='width:18px;height:18px;vertical-align:top' src='https://c740669.ssl.cf2.rackcdn.com/icon_home.png' />
+	
+			<span class='content_heading'><a href='/home/?NewStyle=true'>VIPControl</a> &raquo; <a href='#'>Account</a> &raquo; <a href='/home/account/emails'>Emails</a></span>
+		</div>
+    	<div style='clear:both;'></div><p class="title">Account Emails</p>
+<p>Below is a list of emails sent to you relating to the services and products you have with us.</p>
+
+<center><font face="arial" size="2"><div class="pagination"> <span class="btn btn-disabled disabled">&laquo; previous</span>  <span class="btn btn-blue current">1</span> <a href="./?page=2" class="btn btn-purple">2</a>  <a href="./?page=3" class="btn btn-purple">3</a>  <a href="./?page=4" class="btn btn-purple">4</a>  <a href="./?page=5" class="btn btn-purple">5</a>  <a href="./?page=6" class="btn btn-purple">6</a>  <a href="./?page=7" class="btn btn-purple">7</a>  <a href="./?page=8" class="btn btn-purple">8</a>  <a href="./?page=9" class="btn btn-purple">9</a> ... <a href="./?page=17" class="btn btn-purple">17</a>  <a href="./?page=18" class="btn btn-purple">18</a>  <a href="./?page=2" class="btn btn-purple">next &raquo;</a> </div>
+</font></center><br>
+
+<table class="table_default" cellpadding="0" cellspacing="0">
+<tr>
+  <td class="hdg_col"><p class="cell_ticket_head">Date</td>
+  <td class="hdg_col"><p class="cell_ticket_head">Subject</td>
+</tr>
+	
+	<tr>
+	<td class="cell_col"><p class="cell_text">22 Oct 2016 17:56</p></td>
+	<td class="cell_col"><p class="cell_text"><a href="#" ajax="false" onClick="window.open('/home/account/ZQQQQQQZWUFXvNMaq5sMyKKaWEbODWi94fHSdRMyuwpLCUZtH8%3D/emails/view','','width=820,height=650,scrollbars=yes');return false">Invoice 2926612 has been generated</a></p></td>
+</tr>
+
+	
+	<tr>
+	<td class="cell_col"><p class="cell_text">01 Oct 2016 13:23</p></td>
+	<td class="cell_col"><p class="cell_text"><a href="#" ajax="false" onClick="window.open('/home/account/tOzvt1GAVVVVVVA4wCYPaNn6c515POh13m8J4VBKGVqfxxzq84%3D/emails/view','','width=820,height=650,scrollbars=yes');return false">LAST CHANCE to save 75% on web hosting and win $10,000 CASH!</a></p></td>
+</tr>
+
+	
+	<tr>
+	<td class="cell_col"><p class="cell_text">27 Sep 2016 16:40</p></td>
+	<td class="cell_col"><p class="cell_text"><a href="#" ajax="false" onClick="window.open('/home/account/LC2cstpJbLF2VWLqh6PSpSZQQQQQQZxp5XZQQQQQQZAdIrvISJ0yp6xAVVVVVVA0%3D/emails/view','','width=820,height=650,scrollbars=yes');return false">Discount .COM.AU domains and 75% off web hosting all week long. Don't miss out!</a></p></td>
+</tr>
+
+	
+	<tr>
+	<td class="cell_col"><p class="cell_text">22 Sep 2016 14:15</p></td>
+	<td class="cell_col"><p class="cell_text"><a href="#" ajax="false" onClick="window.open('/home/account/hGOWAemoO934bFIuNGpDq422cTkLOZQQQQQQZAVVVVVVAzAVVVVVVAWrrDkeh9Ag%3D/emails/view','','width=820,height=650,scrollbars=yes');return false">Win $10,000 Cash and Save 75% on Web Hosting with Ventrasaurus Rex!</a></p></td>
+</tr>
+
+	
+	<tr>
+	<td class="cell_col"><p class="cell_text">19 Sep 2016 16:14</p></td>
+	<td class="cell_col"><p class="cell_text"><a href="#" ajax="false" onClick="window.open('/home/account/ohYBN9WOSWTw92562K9sQqaVy82UaeGCaByvAVVVVVVA1eWhd0%3D/emails/view','','width=820,height=650,scrollbars=yes');return false">Ventrasaurus Rex is here and we're giving away $10,000 cash to celebrate!</a></p></td>
+</tr>
+
+	
+	<tr>
+	<td class="cell_col"><p class="cell_text">21 Aug 2016 13:25</p></td>
+	<td class="cell_col"><p class="cell_text"><a href="#" ajax="false" onClick="window.open('/home/account/AVVVVVVAJb0U4oVk8kPZX1Sq3EJzUbxsWVQ8cwHb7hO5sVaGiY%3D/emails/view','','width=820,height=650,scrollbars=yes');return false">Sale ends midnight TONIGHT! Last chance to grab a discount .AU domain name.</a></p></td>
+</tr>
+
+	
+	<tr>
+	<td class="cell_col"><p class="cell_text">18 Aug 2016 06:27</p></td>
+	<td class="cell_col"><p class="cell_text"><a href="#" ajax="false" onClick="window.open('/home/account/dAVVVVVVA518qPwnScL2r7yAVVVVVVAdzA9FitVHooHeAVVVVVVAc9NiGQHf6xc0%3D/emails/view','','width=820,height=650,scrollbars=yes');return false">Your service has been suspended - reelaxn.com</a></p></td>
+</tr>
+
+	
+	<tr>
+	<td class="cell_col"><p class="cell_text">15 Aug 2016 14:53</p></td>
+	<td class="cell_col"><p class="cell_text"><a href="#" ajax="false" onClick="window.open('/home/account/hj7iDFXEYawOseAf4ydVnlNTWONuwOFdafVbDsZQQQQQQZZsXg%3D/emails/view','','width=820,height=650,scrollbars=yes');return false">Get a discount .AU domain name and celebrate our Aussie Champions in Rio!</a></p></td>
+</tr>
+
+	
+	<tr>
+	<td class="cell_col"><p class="cell_text">02 Aug 2016 15:03</p></td>
+	<td class="cell_col"><p class="cell_text"><a href="#" ajax="false" onClick="window.open('/home/account/obZRs9C0zbxCAVVVVVVA6BoH5fDAVVVVVVANAVVVVVVA79qz4UReaD8ZYkeWpzyY%3D/emails/view','','width=820,height=650,scrollbars=yes');return false">Payment confirmation for invoice 2754369</a></p></td>
+</tr>
+
+	
+	<tr>
+	<td class="cell_col"><p class="cell_text">02 Aug 2016 15:01</p></td>
+	<td class="cell_col"><p class="cell_text"><a href="#" ajax="false" onClick="window.open('/home/account/4XQmPjgTZDzWMy23O4XaVtAEw65yBokn9cosJLBG3ZQQQQQQZ8%3D/emails/view','','width=820,height=650,scrollbars=yes');return false">Thank you so much for placing an order with us</a></p></td>
+</tr>
+
+</table><br>
+
+<h2></h2>
+
+		<div style="clear:both;"></div>
+	</div>
+	<div style="clear:both;"></div>
+</div>
+<div id="footer">
+	<br />
+	<p>&copy; 2009 - 2016 <a href="http://ventraip.com.au/" target="_blank">VentraIP Australia Pty Ltd</a><br />
+	ABN 91 137 543 018</p>
+</div>		</body>
+		</html>
